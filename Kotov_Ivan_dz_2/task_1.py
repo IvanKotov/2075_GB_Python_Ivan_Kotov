@@ -1,11 +1,8 @@
-a = 15 * 3
-print(type(a))
 
-b = 15 / 3
-print(type(b))
+print(type(15 * 3))
 
-c = 15 // 2
-print(type(c))
+print(type(15 / 3))
 
-d = 15 ** 2
-print(type(d))
+print(type(15 // 2))
+
+print(type(15 ** 2))
