@@ -17,7 +17,7 @@ def currency_rates(code: str) -> float:
         full_value = start_value[start_valute:end_value]
         result_valute = float(full_value[full_value.find('<VALUE>') + len('<VALUE>'):full_value.find('</VALUE>')].replace(',', '.'))
         result_nominal = int(full_value[full_value.find('<NOMINAL>') + len('<NOMINAL>'):full_value.find('</NOMINAL>')])
-        result_value_ = f'1 {code} = {result_valute / result_nominal} рублей'
+        result_value = f'1 {code} = {result_valute / result_nominal} рублей'
 
     return result_value
 
