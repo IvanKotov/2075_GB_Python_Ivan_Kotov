@@ -1,0 +1,53 @@
+1) Проверить, установлен ли пакет pillow в глобальном окружении. Если да — зафиксировать версию.
+ivan@ivan-Z590-UD-AC:~$ pip show pillow
+Name: Pillow
+Version: 7.0.0
+Summary: Python Imaging Library (Fork)
+Home-page: https://python-pillow.org
+Author: Alex Clark (PIL Fork Author)
+Author-email: aclark@python-pillow.org
+License: HPND
+Location: /usr/lib/python3/dist-packages
+Requires:
+Required-by:
+
+
+2) Установить самую свежую версию pillow, если ранее она не была установлена.
+ivan@ivan-Z590-UD-AC:~$ pip install -U  pillow
+^[Collecting pillow
+  Downloading Pillow-9.0.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.3 MB)
+     |████████████████████████████████| 4.3 MB 1.4 MB/s
+Installing collected packages: pillow
+Successfully installed pillow-9.0.1
+
+
+3) Создать и активировать виртуальное окружение. Убедиться, что в нем нет пакета pillow.
+ivan@ivan-Z590-UD-AC:~$ mkdir task_1
+ivan@ivan-Z590-UD-AC:~$ cd task_1/
+ivan@ivan-Z590-UD-AC:~/task_1$ python3 -m venv virt
+ivan@ivan-Z590-UD-AC:~/task_1$ source virt/bin/activate
+(virt) ivan@ivan-Z590-UD-AC:~/task_1$ pip list
+Package       Version
+------------- -------
+pip           20.0.2
+pkg-resources 0.0.0
+setuptools    44.0.0
+
+4) Установить в виртуальное окружение pillow версии 7.1.1 (или другой, отличной от самой свежей).
+(virt) ivan@ivan-Z590-UD-AC:~/task_1$ pip install pillow==7.1.1
+Collecting pillow==7.1.1
+  Downloading Pillow-7.1.1-cp38-cp38-manylinux1_x86_64.whl (2.1 MB)
+     |████████████████████████████████| 2.1 MB 1.3 MB/s
+Installing collected packages: pillow
+Successfully installed pillow-7.1.1
+(virt) ivan@ivan-Z590-UD-AC:~/task_1$ pip list
+Package       Version
+------------- -------
+Pillow        7.1.1
+pip           20.0.2
+pkg-resources 0.0.0
+setuptools    44.0.0
+
+5) Деактивировать виртуальное окружение
+(virt) ivan@ivan-Z590-UD-AC:~/task_1$ deactivate
+ivan@ivan-Z590-UD-AC:~/task_1$
