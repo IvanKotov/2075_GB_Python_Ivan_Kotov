@@ -19,7 +19,7 @@ def currency_rates(code: str) -> float:
         result_nominal = int(full_value[full_value.find('<NOMINAL>') + len('<NOMINAL>'):full_value.find('</NOMINAL>')])
         result_value_ = f'1 {code} = {result_valute / result_nominal} рублей'
 
-    return result_value_
+    return result_value
 
 
 print(currency_rates("USD"))
